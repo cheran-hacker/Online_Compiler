@@ -6,6 +6,8 @@ import LandingPage from './pages/LandingPage';
 import Compiler from './pages/Compiler';
 import WebEditor from './pages/WebEditor';
 import { LoginPage, RegisterPage } from './pages/AuthPages';
+import ProfilePage from './pages/ProfilePage';
+import { Toaster } from 'react-hot-toast';
 import './App.css';
 
 // Protected Route component
@@ -25,7 +27,9 @@ const AppContent = () => {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/editor" element={<Compiler />} />
         <Route path="/web-editor" element={<WebEditor />} />
+        <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
       </Routes>
+      <Toaster position="top-right" />
     </div>
   );
 };
