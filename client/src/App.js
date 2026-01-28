@@ -9,6 +9,7 @@ import { LoginPage, RegisterPage } from './pages/AuthPages';
 import ProfilePage from './pages/ProfilePage';
 import { Toaster } from 'react-hot-toast';
 import './App.css';
+const API_BASE_URL = "https://online-compiler-aj5e.onrender.com";
 
 // Protected Route component
 const ProtectedRoute = ({ children }) => {
